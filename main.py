@@ -22,3 +22,13 @@ def get_cars(size: Optional[str]= None, fuel: Optional[str]= None):
         filter_db = [car for car in filter_db if car["fuel"] == fuel]
     return filter_db
 
+@app.post("/add_cars/")
+def add_cars(size:str, fuel:str, doors:int):
+    new_car={
+        "id":len(db) + 1,
+        "size": size,
+        "fuel": fuel,
+        "doors": doors
+    }
+    db.append(new_car)
+    return add_cars
