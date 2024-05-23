@@ -22,3 +22,7 @@ Write the Basic FastAPI Code
 4. Run the Application
 
 uvicorn main:app --reload
+
+5. Created first api where by using post method added data
+
+6. Functionality added add_cars
